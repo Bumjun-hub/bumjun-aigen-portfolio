@@ -1,0 +1,379 @@
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="SK AIGEN 지원 프로젝트 포트폴리오" />
+  <title>정범준 | AIGEN Portfolio</title>
+  <style>
+    :root {
+      --bg: #0d1117;
+      --card: #171d26;
+      --text: #f4f6fa;
+      --muted: #abb5c5;
+      --line: #303a49;
+      --accent: #ff5261;
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--text);
+      font-family: system-ui, "Malgun Gothic", sans-serif;
+      line-height: 1.75;
+    }
+    a { color: inherit; text-decoration: none; }
+    .container { width: min(1080px, 90%); margin: auto; }
+    header {
+      border-bottom: 1px solid var(--line);
+      padding: 20px 0;
+    }
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+    .logo { font-weight: 800; letter-spacing: .5px; }
+    .logo span, .accent { color: var(--accent); }
+    .navlinks { display: flex; gap: 20px; flex-wrap: wrap; }
+    .navlinks a { color: var(--muted); font-size: 14px; }
+    .hero { padding: 110px 0 100px; }
+    .eyebrow {
+      color: var(--accent);
+      font-weight: 700;
+      letter-spacing: 2px;
+      font-size: 13px;
+    }
+    h1 {
+      font-size: clamp(36px, 6vw, 65px);
+      line-height: 1.28;
+      letter-spacing: -2px;
+      margin: 20px 0 26px;
+    }
+    h2 {
+      font-size: clamp(27px, 4vw, 38px);
+      letter-spacing: -1px;
+      margin: 0 0 14px;
+    }
+    h3 { font-size: 23px; margin: 8px 0 12px; }
+    p { margin: 0 0 16px; }
+    .lead {
+      max-width: 740px;
+      color: var(--muted);
+      font-size: 18px;
+    }
+    section { padding: 75px 0; }
+    .section-intro { color: var(--muted); margin-bottom: 32px; }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+    }
+    .card, .project {
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      padding: 30px;
+    }
+    .card .num { color: var(--accent); font-weight: 800; }
+    .card p, .project p { color: var(--muted); }
+    .project { margin-bottom: 24px; }
+    .project-label {
+      color: var(--accent);
+      font-weight: 700;
+      font-size: 13px;
+    }
+    .tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin: 20px 0;
+    }
+    .tag {
+      border: 1px solid var(--line);
+      border-radius: 30px;
+      padding: 5px 12px;
+      font-size: 12px;
+      color: #d9e0e9;
+    }
+    .detail {
+      border-top: 1px solid var(--line);
+      padding-top: 20px;
+      margin-top: 20px;
+    }
+    .detail strong { color: white; }
+    .links { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 24px; }
+    .button {
+      display: inline-block;
+      padding: 11px 18px;
+      background: var(--accent);
+      color: #111;
+      border-radius: 8px;
+      font-weight: 750;
+      font-size: 14px;
+    }
+    .button.secondary {
+      background: transparent;
+      color: var(--text);
+      border: 1px solid var(--line);
+    }
+    .goal {
+      padding: 36px;
+      border-left: 4px solid var(--accent);
+      background: var(--card);
+      border-radius: 0 16px 16px 0;
+    }
+    footer {
+      border-top: 1px solid var(--line);
+      color: var(--muted);
+      text-align: center;
+      padding: 30px;
+      font-size: 13px;
+    }
+    @media (max-width: 760px) {
+      .hero { padding: 75px 0; }
+      section { padding: 48px 0; }
+      .grid { grid-template-columns: 1fr; }
+      .project, .card { padding: 22px; }
+      h1 { letter-spacing: -1px; }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <nav class="container">
+    <a class="logo" href="#">JB<span>.</span> PORTFOLIO</a>
+    <div class="navlinks">
+      <a href="#about">About</a>
+      <a href="#projects">Projects</a>
+      <a href="#vision">Vision</a>
+    </div>
+  </nav>
+</header>
+
+<main>
+  <div class="container hero" id="about">
+    <div class="eyebrow">SK AIGEN · TECH / EXPLORATION</div>
+    <h1>
+      문제를 발견하고,<br>
+      <span class="accent">기술로 해결하며,</span><br>
+      더 나은 방법을 탐구합니다.
+    </h1>
+    <p class="lead">
+      안녕하세요. 사용자 문제를 실제 서비스로 구현하는
+      개발자 정범준입니다.
+      웹 서비스의 기획부터 설계, 구현, 검증, 배포까지 경험하며
+      문제 해결과 지속적인 개선의 중요성을 배웠습니다.
+      앞으로는 AI 기술을 실제 서비스에 적용해
+      사용자에게 도움이 되는 결과를 만들고 싶습니다.
+    </p>
+    <div class="links">
+      <a class="button" href="#projects">프로젝트 살펴보기</a>
+      <a class="button secondary"
+         href="https://github.com/Bumjun-hub"
+         target="_blank" rel="noopener noreferrer">GitHub</a>
+    </div>
+  </div>
+
+  <section>
+    <div class="container">
+      <h2>How I Approach Problems</h2>
+      <p class="section-intro">
+        SK AIGEN의 인재상과 연결되는 저의 개발 경험입니다.
+      </p>
+      <div class="grid">
+        <article class="card">
+          <div class="num">01 · 도전가</div>
+          <h3>직접 시도합니다</h3>
+          <p>
+            Project S를 개인 프로젝트로 시작해
+            프론트엔드, 백엔드, 데이터베이스,
+            테스트, 서버 배포까지 직접 도전했습니다.
+          </p>
+        </article>
+        <article class="card">
+          <div class="num">02 · 성취가</div>
+          <h3>끝까지 구현합니다</h3>
+          <p>
+            아이디어에서 멈추지 않고 실제 동작하는
+            서비스 흐름을 완성했습니다.
+            핵심 기능에 대한 테스트 70건도 작성했습니다.
+          </p>
+        </article>
+        <article class="card">
+          <div class="num">03 · 혁신가</div>
+          <h3>개선점을 찾습니다</h3>
+          <p>
+            기존 방식이 항상 최선은 아니라고 생각합니다.
+            NeighFund의 API와 상태 관리 구조를
+            다시 설계하는 리팩터링을 진행했습니다.
+          </p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section id="projects">
+    <div class="container">
+      <h2>Selected Projects</h2>
+      <p class="section-intro">
+        문제 정의부터 구현과 개선까지의 과정을 담았습니다.
+      </p>
+
+      <article class="project">
+        <div class="project-label">PERSONAL PROJECT · 2026</div>
+        <h3>Project S</h3>
+        <p>사용자 실측 기반 의류 사이즈 추천 서비스</p>
+
+        <div class="tags">
+          <span class="tag">Next.js</span>
+          <span class="tag">TypeScript</span>
+          <span class="tag">Spring Boot</span>
+          <span class="tag">PostgreSQL</span>
+          <span class="tag">JWT</span>
+        </div>
+
+        <div class="detail">
+          <strong>문제 발견</strong>
+          <p>
+            브랜드마다 다른 의류 실측 기준으로 인해
+            온라인 쇼핑에서 적절한 사이즈를 선택하기
+            어렵다는 문제에 주목했습니다.
+          </p>
+
+          <strong>해결을 위한 시도</strong>
+          <p>
+            사용자의 신체 정보와 평소 잘 맞는 옷의
+            실측·착용감 정보를 활용해
+            상품 사이즈를 비교하는 규칙 기반 추천 기능을
+            설계하고 구현했습니다.
+          </p>
+
+          <strong>직접 기여한 부분</strong>
+          <p>
+            Next.js와 Spring Boot 기반 서비스를
+            단독 설계·개발했습니다.
+            회원 인증, REST API, 추천 계산 로직,
+            상태 관리, 데이터베이스 연동을 구현했습니다.
+            추천 계산 책임을 RecommendationCalculator로
+            분리해 수정과 검증이 쉽도록 구성했습니다.
+          </p>
+
+          <strong>결과와 배운 점</strong>
+          <p>
+            주요 기능의 단위·통합 테스트 70건을 작성하고,
+            Ubuntu Server에서 직접 배포를 경험했습니다.
+            기능 구현뿐 아니라 시스템 구조와
+            데이터 일관성을 고려하는 중요성을 배웠습니다.
+          </p>
+        </div>
+
+        <div class="links">
+          <a class="button"
+             href="https://github.com/Bumjun-hub/Project-S"
+             target="_blank" rel="noopener noreferrer">GitHub 코드 보기</a>
+          <a class="button secondary"
+             href="https://project-s-rust.vercel.app/"
+             target="_blank" rel="noopener noreferrer">웹 데모 보기</a>
+        </div>
+        <p style="font-size:12px; margin-top:14px">
+          * 공개 웹 데모는 예시 데이터 기반으로 제공됩니다.
+        </p>
+      </article>
+
+      <article class="project">
+        <div class="project-label">TEAM PROJECT · 4 MEMBERS · 2025</div>
+        <h3>NeighFund</h3>
+        <p>지역 주민 참여형 제안·펀딩 플랫폼</p>
+
+        <div class="tags">
+          <span class="tag">React</span>
+          <span class="tag">JavaScript</span>
+          <span class="tag">Spring Boot</span>
+          <span class="tag">MySQL</span>
+          <span class="tag">Context API</span>
+        </div>
+
+        <div class="detail">
+          <strong>문제 발견</strong>
+          <p>
+            지역 주민들이 문제를 제안하고
+            함께 해결 과정에 참여할 수 있는
+            서비스를 만들고자 했습니다.
+          </p>
+
+          <strong>팀 프로젝트에서의 역할</strong>
+          <p>
+            프론트엔드 개발에 참여해 제안 게시판,
+            펀딩 관련 UI, 검색·정렬·무한스크롤,
+            다단계 펀딩 작성 흐름 등을 구현했습니다.
+            Context API를 사용해 단계 이동 중
+            입력 데이터가 유지되도록 구성했습니다.
+          </p>
+
+          <strong>이후 발견한 문제</strong>
+          <p>
+            기능 개발 이후 페이지별로 분산된 API 호출과
+            일관되지 않은 상태 관리 구조가
+            유지보수에 불리하다는 점을 발견했습니다.
+          </p>
+
+          <strong>새로운 개선 시도</strong>
+          <p>
+            이후 개인 리팩터링을 진행하며 API 호출을
+            공통 모듈로 재구성하고 React Query를 도입했습니다.
+            서버 상태와 UI 상태의 책임을 분리하고
+            컴포넌트 구조를 개선했습니다.
+          </p>
+        </div>
+
+        <div class="links">
+          <a class="button"
+             href="https://github.com/Bumjun-hub/Project_NeighFund"
+             target="_blank" rel="noopener noreferrer">원본 GitHub</a>
+          <a class="button secondary"
+             href="https://github.com/Bumjun-hub/neighfund-refactoring"
+             target="_blank" rel="noopener noreferrer">리팩터링 코드</a>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <section id="vision">
+    <div class="container">
+      <h2>Next Challenge · AI Service Engineering</h2>
+      <div class="goal">
+        <h3>AI를 실제 사용자 경험으로 연결하고 싶습니다.</h3>
+        <p>
+          저는 AI 모델을 처음부터 연구하기보다,
+          AI 기술을 실제 서비스에 적용하여
+          사람들의 문제를 해결하는 개발자가 되고 싶습니다.
+        </p>
+        <p>
+          AIGEN에서는 LLM API, RAG, AI Agent,
+          외부 데이터 연동과 응답 평가 방법을
+          자기주도적으로 학습하고 탐구하고 싶습니다.
+        </p>
+        <p>
+          Project S의 추천 시스템과 같은 기존 서비스에
+          AI를 적용하는 실험을 통해,
+          단순한 기능 시연을 넘어 정확성,
+          사용성, 신뢰성을 검증하는 제품을
+          만들어 보고자 합니다.
+        </p>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  정범준 · AIGEN Project Portfolio
+</footer>
+
+</body>
+</html>
